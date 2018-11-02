@@ -1,0 +1,76 @@
+﻿<DOCTYPE html>
+<html>
+<head>
+<title> Traking parcel order</title>
+<h2> Track your Parcel order<order>
+</head>
+<body>
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="order.html">Order Parcel Delivery</a>
+  <a href="about.html">About Us</a>
+  <a href="login.html">Login</a>
+  <a href="regester.html">Regester</a>
+</div>
+<form method="post" action="/tracking/">
+        <div>
+            <div style="display:flex;flex-wrap:wrap;align-items: end;">
+                <div style="flex:1; margin: 25px 10px 0 0;">
+                    <div>Parcel order Number:</div>
+                    <div>
+                        <input autofocus value="" required type="tel" name="parcel_id" id="parcel_id" maxlength="5" placeholder="Parcel order Number" style="width:150px;height:20px;padding: 6px 12px;margin:1px;">
+                    </div>
+                </div>
+                <div style="flex:1; margin: 25px 10px 0 0;">
+                    <!--<div style="display:flex;flex-wrap:wrap;">-->
+                        <!--<div style="flex:1;">-->
+                            Search By:<br>
+                            <select required name="searchby" id="searchby" style="width:150px;height: 34px; padding: 6px 12px; background-color: #fff; border: 1px solid #ccc; border-radius: 2px;font-size: 14px;line-height: 1.42857143; display: block;">
+                                <option value=""> - Select - </option>
+                                <option value="1">Date #</option>
+                                <option value="2">ID #</option>
+                            </select>
+                        <!--</div>-->
+
+
+                    <!--</div>-->
+                </div>
+                <div id="div-search-by" style="flex:1; margin: 25px 10px 0 0; display:none; visibilityx: hidden;">
+                    <div id="search-by-label"></div>
+                    <input value="" required type="text" name="search_input" id="search_input" maxlength="20" placeholder="" style="width:150px;height:20px;padding: 6px 12px;margin:1px;">
+                </div>
+                <div style="flex:1; margin: 25px 0 0 0;">
+                    <div style="visibility: hidden">Submit</div>
+                    <div><input type="submit" name="find" value="Lookup Order" style="margin-top:3px;"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
